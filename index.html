@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Utama -->
+    <title>Pengumuman Kelulusan SMPN 4 Silo 2026 | Cek Kelulusan Online</title>
+    <meta name="description" content="Sistem Informasi Kelulusan Resmi SMPN 4 Silo Jember Tahun Ajaran 2025/2026. Masukkan NISN Siswa untuk mengecek hasil kelulusan mandiri secara online dan cepat.">
+    <meta name="keywords" content="smpn 4 silo, kelulusan smpn 4 silo, cek nisn kelulusan, pengumuman kelulusan jember, kelulusan smp 2026, jember, silo">
+    <meta name="author" content="Tim IT SMPN 4 Silo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smpn4silo.sch.id/kelulusan">
+
+    <!-- Open Graph / Meta Facebook (Social Media Optimization) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smpn4silo.sch.id/kelulusan">
+    <meta property="og:title" content="Pengumuman Kelulusan SMPN 4 Silo Tahun Ajaran 2025/2026">
+    <meta property="og:description" content="Layanan resmi pengecekan status kelulusan siswa-siswi SMPN 4 Silo secara online menggunakan nomor NISN atau NPSN sekolah.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Twitter Card (Social Media Optimization) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smpn4silo.sch.id/kelulusan">
+    <meta property="twitter:title" content="Pengumuman Kelulusan SMPN 4 Silo 2026">
+    <meta property="twitter:description" content="Gunakan NISN atau NPSN sekolah untuk mengecek informasi resmi kelulusan SMPN 4 Silo secara instan.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationEvent",
+      "name": "Pengumuman Kelulusan SMPN 4 Silo Tahun Ajaran 2025/2026",
+      "description": "Sistem Informasi Kelulusan Siswa Kelas IX SMPN 4 Silo Kabupaten Jember secara Mandiri Online.",
+      "startDate": "2026-06-10T10:00:00+07:00",
+      "endDate": "2026-06-30T23:59:59+07:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://smpn4silo.sch.id/kelulusan"
+      },
+      "organizer": {
+        "@type": "EducationalOrganization",
+        "name": "SMPN 4 Silo",
+        "url": "https://smpn4silo.sch.id",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Silo, Jember",
+          "addressRegion": "Jawa Timur",
+          "addressCountry": "ID"
+        }
+      }
+    }
+    </script>
+    <!-- Memuat Tailwind CSS untuk desain responsif modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Library canvas-confetti untuk efek perayaan meriah -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Google Fonts untuk tipografi premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 50%, #ede9fe 100%);
+            background-attachment: fixed;
+        }
+        
+        .fade-scale-in {
+            animation: fadeScaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        
+        @keyframes fadeScaleIn {
+            0% { opacity: 0; transform: scale(0.95) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .bg-shape {
+            position: absolute;
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+        
+        .img-loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Styling kustom scrollbar untuk container daftar kelulusan */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4 relative z-0 overflow-x-hidden py-10">
+
+    <!-- Ornamen Background Estetik -->
+    <div class="bg-shape bg-blue-400 w-72 h-72 rounded-full top-0 left-0 fixed"></div>
+    <div class="bg-shape bg-indigo-400 w-80 h-80 rounded-full bottom-0 right-0 fixed"></div>
+    <div class="bg-shape bg-purple-300 w-64 h-64 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 fixed opacity-30"></div>
+
+    <!-- Main Container -->
+    <div id="mainCard" class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden border border-white/60 relative z-10 flex flex-col transition-all duration-500">
+        
+        <!-- Bagian Foto Banner Sekolah -->
+        <div class="relative h-48 w-full bg-gray-200">
+            <img id="schoolBanner" 
+                 src="banner.jpg" 
+                 alt="Foto Sekolah SMPN 4 Silo" 
+                 class="w-full h-full object-cover">
+            <!-- Overlay gradasi warna gelap -->
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent"></div>
+            
+            <!-- Logo Sekolah Melayang -->
+            <!-- Ganti atribut 'src' di bawah ini untuk mengganti Logo Sekolah Anda -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white p-1.5 rounded-full flex items-center justify-center border-4 border-indigo-600 shadow-xl z-20 overflow-hidden">
+                <img id="schoolLogo" 
+                     src="logo.png" 
+                     alt="Logo SMPN 4 Silo" 
+                     class="w-full h-full object-contain rounded-full"
+                     onerror="this.src='https://api.dicebear.com/9.x/initials/svg?seed=SMPN4&backgroundColor=4f46e5'">
+            </div>
+        </div>
+
+        <!-- Header Title Section -->
+        <div class="bg-gradient-to-r from-blue-700 to-indigo-800 pt-8 pb-6 px-6 text-center text-white relative z-10 shadow-md">
+            <h1 class="text-2xl sm:text-3xl font-extrabold mb-1 tracking-tight drop-shadow-md">PENGUMUMAN KELULUSAN</h1>
+            <h2 class="text-lg sm:text-xl font-semibold text-blue-100 drop-shadow">SMPN 4 SILO - JEMBER</h2>
+            <span class="inline-block px-4 py-1.5 bg-black/20 rounded-full text-xs font-semibold mt-3 border border-white/10 tracking-wider">
+                TAHUN AJARAN 2025/2026
+            </span>
+        </div>
+
+        <div class="p-6 sm:p-8 flex-grow">
+            
+            <!-- Area Form Pencarian Tunggal -->
+            <div id="searchSection" class="fade-scale-in">
+                <div class="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-4 mb-6">
+                    <p class="text-indigo-950 text-sm text-center leading-relaxed font-medium">
+                        Masukkan <strong>NISN</strong> untuk cek hasil.
+                    </p>
+                </div>
+
+                <form id="unifiedForm" class="space-y-5">
+                    <div class="relative">
+                        <label for="searchQuery" class="block text-sm font-bold text-gray-700 mb-2">NISN Siswa</label>
+                        <div class="relative">
+                            <input type="text" id="searchQuery" name="searchQuery" placeholder="Contoh: 0012345678 atau 20524915"
+                                class="w-full pl-11 pr-4 py-3.5 bg-white border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-indigo-500 outline-none transition-all duration-300 font-semibold text-gray-800 shadow-sm"
+                                pattern="[0-9]+" title="Hanya masukkan angka">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p id="errorMessage" class="text-red-500 text-sm mt-2 hidden flex items-center font-medium">
+                            <svg class="w-4 h-4 mr-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span id="errorText">Data tidak ditemukan.</span>
+                        </p>
+                    </div>
+                    <button type="submit" 
+                        class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold py-3.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-indigo-500/30 transform hover:-translate-y-0.5 flex justify-center items-center">
+                        <span id="btnText">Cek NISN</span>
+                        <svg id="btnSpinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Result Section (Individu) -->
+            <div id="resultSection" class="hidden">
+                <!-- Foto Siswa Melingkar -->
+                <div class="flex justify-center mb-5 relative mt-[-20px]">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full scale-110 blur-md opacity-50 animate-pulse"></div>
+                        <div class="w-28 h-28 rounded-full p-1 bg-white shadow-xl relative z-10 mx-auto overflow-hidden">
+                            <img id="studentPhoto" src="" alt="Foto Siswa" 
+                                class="w-full h-full object-cover rounded-full border-4 border-gray-50 img-loading bg-white">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-extrabold text-gray-800" id="studentName">Nama Siswa</h3>
+                    <div class="inline-block mt-2 bg-gray-100 rounded-full px-4 py-1 border border-gray-200">
+                        <p class="text-gray-600 text-sm font-semibold">NISN: <span id="studentNisn" class="text-gray-900 font-bold"></span></p>
+                    </div>
+                </div>
+
+                <div class="mb-6 text-center bg-gray-50 rounded-2xl p-5 border border-gray-100 shadow-inner">
+                    <p class="text-xs text-gray-500 mb-3 font-bold uppercase tracking-widest">Status Kelulusan</p>
+                    <div id="statusBadge" class="inline-block px-8 py-3 rounded-xl text-2xl font-black uppercase tracking-widest shadow-md transition-all duration-300">
+                        <!-- Status Kelulusan di-inject disini -->
+                    </div>
+                </div>
+
+                <div id="detailsCard" class="bg-white border border-gray-200 shadow-sm rounded-xl p-5 mb-8 text-sm text-gray-700 space-y-3 hidden">
+                   <div class="flex justify-between items-center pb-3 border-b border-gray-100">
+                       <span class="text-gray-500 font-bold">Kelas</span>
+                       <span id="studentClass" class="font-black text-gray-800 bg-gray-100 px-3 py-1 rounded-md"></span>
+                   </div>
+                   <div class="pt-2">
+                       <span class="block text-gray-500 font-bold mb-2">Catatan Wali Kelas:</span>
+                       <p id="studentMessage" class="italic text-gray-700 bg-blue-50/50 p-4 rounded-lg border-l-4 border-blue-400 leading-relaxed font-medium"></p>
+                   </div>
+                </div>
+
+                <button id="btnBack" type="button"
+                    class="w-full bg-white hover:bg-gray-50 text-gray-700 font-bold py-3.5 px-4 rounded-xl border-2 border-gray-200 transition-colors duration-200 flex justify-center items-center">
+                    <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Kembali ke Pencarian
+                </button>
+            </div>
+
+            <!-- Result Section (Daftar Lulus NPSN) -->
+            <div id="npsnResultSection" class="hidden">
+                <div class="text-center mb-6">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-gray-800">Daftar Siswa Lulus</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-medium">SMPN 4 Silo (T.A. 2025/2026)</p>
+                </div>
+                
+                <!-- Grid Card Siswa Lulus (Scrollable) -->
+                <div class="mb-6">
+                    <div id="graduatesGrid" class="max-h-[380px] overflow-y-auto custom-scrollbar p-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Card siswa di-generate lewat JavaScript -->
+                    </div>
+                    <!-- Total Badge -->
+                    <div class="mt-4 bg-indigo-50 border border-indigo-100 p-3 rounded-xl text-center text-sm font-bold text-indigo-700">
+                        Total Kelulusan: <span id="totalLulus">0</span> Siswa
+                    </div>
+                </div>
+
+                <button id="btnBackNpsn" type="button"
+                    class="w-full bg-white hover:bg-gray-50 text-gray-700 font-bold py-3.5 px-4 rounded-xl border-2 border-gray-200 transition-colors duration-200 flex justify-center items-center">
+                    <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Kembali ke Pencarian
+                </button>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-gray-50 p-4 text-center border-t border-gray-200 mt-auto">
+            <p class="text-xs text-gray-500 font-semibold tracking-wide">
+                INFORMASI KELULUSAN | Made with 💔 by : em.rivki &copy; 2026 <br>
+                <span class="text-gray-400 font-medium">SMPN 4 SILO - Kabupaten Jember</span> <br> All Rights Reserved
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // NPSN Sekolah untuk validasi form rekap daftar kelulusan
+        const NPSN_SEKOLAH = "20524915";
+
+        // Data Mockup Siswa dengan link foto realistik (Pravatar / Dicebear)
+        const dataSiswa = [
+            { nisn: "0012345678", nama: "Ahmad Budi Santoso", kelas: "IX-A", lulus: true, pesan: "Selamat! Lanjutkan semangat belajarmu di jenjang selanjutnya.", foto: "https://i.pravatar.cc/150?u=0012345678" },
+            { nisn: "0087654321", nama: "Siti Aminah", kelas: "IX-B", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "https://i.pravatar.cc/150?u=0087654321" },
+            { nisn: "0011223344", nama: "Cahyo Purnomo", kelas: "IX-A", lulus: false, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "https://i.pravatar.cc/150?u=0011223344" },
+            { nisn: "1234567890", nama: "Dewi Lestari", kelas: "IX-C", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "https://i.pravatar.cc/150?u=1234567890" },
+            { nisn: "0022334455", nama: "Eko Prasetyo", kelas: "IX-A", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "https://i.pravatar.cc/150?u=0022334455" },
+            { nisn: "0033445566", nama: "Fitri Handayani", kelas: "IX-B", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "https://i.pravatar.cc/150?u=0033445566" },
+            { nisn: "0044556677", nama: "Galih Rakasiwi", kelas: "IX-C", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "https://i.pravatar.cc/150?u=0044556677" },
+            { nisn: "0055667788", nama: "Hana Susanti", kelas: "IX-A", lulus: false, pesan: "Jangan berkecil hati, kegagalan adalah sukses yang tertunda.", foto: "https://i.pravatar.cc/150?u=0055667788" },
+        ];
+
+        // DOM Elements
+        const mainCard = document.getElementById('mainCard');
+        const searchSection = document.getElementById('searchSection');
+        const resultSection = document.getElementById('resultSection');
+        const npsnResultSection = document.getElementById('npsnResultSection');
+
+        // Form Elements
+        const form = document.getElementById('unifiedForm');
+        const searchQueryInput = document.getElementById('searchQuery');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorText = document.getElementById('errorText');
+        const btnBack = document.getElementById('btnBack');
+        const btnBackNpsn = document.getElementById('btnBackNpsn');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+
+        // Single Student View DOMs
+        const elName = document.getElementById('studentName');
+        const elNisn = document.getElementById('studentNisn');
+        const elStatusBadge = document.getElementById('statusBadge');
+        const elDetailsCard = document.getElementById('detailsCard');
+        const elClass = document.getElementById('studentClass');
+        const elMessage = document.getElementById('studentMessage');
+        const elPhoto = document.getElementById('studentPhoto');
+
+        // NPSN Grid View DOMs
+        const graduatesGrid = document.getElementById('graduatesGrid');
+        const totalLulusEl = document.getElementById('totalLulus');
+
+        // Fungsi efek konfeti meriah
+        function triggerConfetti() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
+            function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+
+            var interval = setInterval(function() {
+              var timeLeft = animationEnd - Date.now();
+              if (timeLeft <= 0) return clearInterval(interval);
+              var particleCount = 50 * (timeLeft / duration);
+              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+              confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+        }
+
+        // Fungsi reset view ke form pencarian utama
+        function showSearchForm() {
+            resultSection.classList.add('hidden');
+            npsnResultSection.classList.add('hidden');
+            searchSection.classList.remove('hidden');
+            searchSection.classList.add('fade-scale-in');
+            mainCard.classList.remove('max-w-2xl');
+            mainCard.classList.add('max-w-xl');
+            
+            searchQueryInput.value = '';
+            searchQueryInput.focus();
+            errorMessage.classList.add('hidden');
+            searchQueryInput.classList.remove('border-red-500', 'bg-red-50');
+        }
+
+        // Menampilkan pesan error input
+        function showError(msg) {
+            errorText.innerText = msg;
+            errorMessage.classList.remove('hidden');
+            searchQueryInput.classList.add('border-red-500', 'bg-red-50');
+            
+            form.animate([
+                { transform: 'translateX(0)' }, { transform: 'translateX(-6px)' },
+                { transform: 'translateX(6px)' }, { transform: 'translateX(-6px)' },
+                { transform: 'translateX(0)' }
+            ], { duration: 300, iterations: 1 });
+        }
+
+        // Membuka View Detail Individu (NISN)
+        function showSingleResult(student) {
+            searchSection.classList.add('hidden');
+            resultSection.classList.remove('hidden');
+            resultSection.classList.add('fade-scale-in');
+            
+            elName.innerText = student.nama;
+            elNisn.innerText = student.nisn;
+            elClass.innerText = student.kelas;
+            elMessage.innerText = student.pesan;
+
+            // Load Foto Siswa
+            elPhoto.classList.add('img-loading');
+            const fallbackImage = `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(student.nama)}&backgroundColor=0ea5e9,4f46e5`;
+            
+            if (student.foto) {
+                elPhoto.src = student.foto;
+                elPhoto.onload = () => elPhoto.classList.remove('img-loading');
+                elPhoto.onerror = function() {
+                    this.onerror = null;
+                    this.src = fallbackImage;
+                    this.classList.remove('img-loading');
+                };
+            } else {
+                elPhoto.src = fallbackImage;
+                elPhoto.classList.remove('img-loading');
+            }
+
+            // Atur Badge Status
+            elStatusBadge.className = 'inline-block px-8 py-3 rounded-xl text-2xl font-black uppercase tracking-widest shadow-md transition-all duration-500 scale-95';
+            
+            if (student.lulus) {
+                elStatusBadge.innerText = "L U L U S";
+                elStatusBadge.classList.add('bg-gradient-to-r', 'from-green-500', 'to-emerald-600', 'text-white', 'shadow-green-500/40');
+                elDetailsCard.classList.remove('hidden');
+                triggerConfetti();
+            } else {
+                elStatusBadge.innerText = "TIDAK LULUS";
+                elStatusBadge.classList.add('bg-gradient-to-r', 'from-red-500', 'to-rose-600', 'text-white', 'shadow-red-500/40');
+                elDetailsCard.classList.remove('hidden');
+            }
+        }
+
+        // Membuka View Hasil Massal (NPSN)
+        function showNpsnResult() {
+            searchSection.classList.add('hidden');
+            npsnResultSection.classList.remove('hidden');
+            npsnResultSection.classList.add('fade-scale-in');
+            
+            // Mengubah ukuran lebar card utama agar grid lulusan tampil lega
+            mainCard.classList.remove('max-w-xl');
+            mainCard.classList.add('max-w-2xl');
+
+            // Ambil semua data siswa yang dinyatakan Lulus
+            const siswaLulus = dataSiswa.filter(s => s.lulus);
+            graduatesGrid.innerHTML = '';
+            totalLulusEl.innerText = siswaLulus.length;
+
+            if (siswaLulus.length === 0) {
+                graduatesGrid.innerHTML = '<div class="col-span-full py-8 text-center text-gray-500 font-semibold">Belum ada siswa yang dinyatakan lulus.</div>';
+                return;
+            }
+
+            // Buat kartu profil masing-masing siswa yang lulus
+            siswaLulus.forEach((siswa) => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-gray-100 hover:border-indigo-150 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center space-x-3";
+                
+                const initialsFallback = `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(siswa.nama)}&backgroundColor=0ea5e9,4f46e5`;
+                
+                card.innerHTML = `
+                    <div class="relative w-14 h-14 shrink-0 rounded-full p-0.5 bg-gradient-to-tr from-green-400 to-indigo-500 shadow">
+                        <img src="${siswa.foto || initialsFallback}" alt="${siswa.nama}" 
+                             class="w-full h-full object-cover rounded-full border border-white"
+                             onerror="this.onerror=null; this.src='${initialsFallback}';">
+                    </div>
+                    <div class="min-w-0 flex-grow">
+                        <h4 class="text-sm font-extrabold text-gray-800 truncate" title="${siswa.nama}">${siswa.nama}</h4>
+                        <p class="text-xs text-gray-500 font-semibold mt-0.5">NISN: ${siswa.nisn}</p>
+                        <div class="flex items-center space-x-1.5 mt-1.5">
+                            <span class="text-[10px] px-2 py-0.5 font-bold rounded-full bg-gray-100 text-gray-600 border border-gray-200">${siswa.kelas}</span>
+                            <span class="text-[10px] px-2 py-0.5 font-bold rounded-full bg-green-100 text-green-700 border border-green-200">LULUS</span>
+                        </div>
+                    </div>
+                `;
+                graduatesGrid.appendChild(card);
+            });
+
+            // Trigger konfeti singkat atas perayaan institusi
+            triggerConfetti();
+        }
+
+        // Form Submit Handler
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = searchQueryInput.value.trim();
+
+            if (!query) {
+                showError("Mohon masukkan nomor NISN Anda.");
+                return;
+            }
+
+            // Efek Loading
+            btnText.innerText = "Memproses...";
+            btnSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+            errorMessage.classList.add('hidden');
+            searchQueryInput.classList.remove('border-red-500', 'bg-red-50');
+
+            setTimeout(() => {
+                // Reset Tombol
+                btnText.innerText = "Proses Pencarian";
+                btnSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+
+                if (query === NPSN_SEKOLAH) {
+                    // Masuk sebagai pengecekan NPSN (Daftar Siswa)
+                    showNpsnResult();
+                } else {
+                    // Cari berdasarkan NISN Siswa
+                    const student = dataSiswa.find(s => s.nisn === query);
+                    if (student) {
+                        showSingleResult(student);
+                    } else {
+                        showError("Data NISN / NPSN tidak ditemukan. Pastikan data yang dimasukkan benar.");
+                    }
+                }
+            }, 900);
+        });
+
+        // Event Tombol Kembali
+        btnBack.addEventListener('click', showSearchForm);
+        btnBackNpsn.addEventListener('click', showSearchForm);
+
+        // Autofokus Input utama ketika aplikasi dimuat
+        window.onload = () => searchQueryInput.focus();
+    </script>
+</body>
+</html>
