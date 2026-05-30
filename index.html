@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta Tag SEO Utama -->
     <title>Pengumuman Kelulusan SMPN 4 Silo 2026 | Cek Kelulusan Online</title>
     <meta name="description" content="Sistem Informasi Kelulusan Resmi SMPN 4 Silo Jember Tahun Ajaran 2025/2026. Masukkan NISN Siswa untuk mengecek hasil kelulusan mandiri secara online dan cepat.">
     <meta name="keywords" content="smpn 4 silo, kelulusan smpn 4 silo, cek nisn kelulusan, pengumuman kelulusan jember, kelulusan smp 2026, jember, silo">
@@ -11,14 +10,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rifkiarif.github.io/kelulusan-murid-smpn4silo/">
 
-    <!-- Open Graph / Meta Facebook (Social Media Optimization) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rifkiarif.github.io/kelulusan-murid-smpn4silo/">
     <meta property="og:title" content="Pengumuman Kelulusan SMPN 4 Silo Tahun Ajaran 2025/2026">
     <meta property="og:description" content="Layanan resmi pengecekan status kelulusan siswa-siswi SMPN 4 Silo secara online menggunakan nomor NISN atau NPSN sekolah.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
 
-    <!-- Twitter Card (Social Media Optimization) -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://rifkiarif.github.io/kelulusan-murid-smpn4silo/">
     <meta property="twitter:title" content="Pengumuman Kelulusan SMPN 4 Silo 2026">
@@ -52,11 +49,10 @@
       }
     }
     </script>
-    <!-- Memuat Tailwind CSS untuk desain responsif modern -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Library canvas-confetti untuk efek perayaan meriah -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <!-- Google Fonts untuk tipografi premium -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
@@ -114,25 +110,19 @@
 
 <body class="min-h-screen flex items-center justify-center p-4 relative z-0 overflow-x-hidden py-10">
 
-    <!-- Ornamen Background Estetik -->
     <div class="bg-shape bg-blue-400 w-72 h-72 rounded-full top-0 left-0 fixed"></div>
     <div class="bg-shape bg-indigo-400 w-80 h-80 rounded-full bottom-0 right-0 fixed"></div>
     <div class="bg-shape bg-purple-300 w-64 h-64 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 fixed opacity-30"></div>
 
-    <!-- Main Container -->
     <div id="mainCard" class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-xl overflow-hidden border border-white/60 relative z-10 flex flex-col transition-all duration-500">
         
-        <!-- Bagian Foto Banner Sekolah -->
         <div class="relative h-48 w-full bg-gray-200">
             <img id="schoolBanner" 
                  src="banner.jpg" 
                  alt="Foto Sekolah SMPN 4 Silo" 
                  class="w-full h-full object-cover">
-            <!-- Overlay gradasi warna gelap -->
             <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent"></div>
             
-            <!-- Logo Sekolah Melayang -->
-            <!-- Ganti atribut 'src' di bawah ini untuk mengganti Logo Sekolah Anda -->
             <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white p-1.5 rounded-full flex items-center justify-center border-4 border-indigo-600 shadow-xl z-20 overflow-hidden">
                 <img id="schoolLogo" 
                      src="logo.png" 
@@ -142,7 +132,6 @@
             </div>
         </div>
 
-        <!-- Header Title Section -->
         <div class="bg-gradient-to-r from-blue-700 to-indigo-800 pt-8 pb-6 px-6 text-center text-white relative z-10 shadow-md">
             <h1 class="text-2xl sm:text-3xl font-extrabold mb-1 tracking-tight drop-shadow-md">PENGUMUMAN KELULUSAN</h1>
             <h2 class="text-lg sm:text-xl font-semibold text-blue-100 drop-shadow">SMPN 4 SILO - JEMBER</h2>
@@ -153,7 +142,6 @@
 
         <div class="p-6 sm:p-8 flex-grow">
             
-            <!-- Area Form Pencarian Tunggal -->
             <div id="searchSection" class="fade-scale-in">
                 <div class="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-4 mb-6">
                     <p class="text-indigo-950 text-sm text-center leading-relaxed font-medium">
@@ -192,54 +180,64 @@
                 </form>
             </div>
 
-            <!-- Result Section (Individu) -->
             <div id="resultSection" class="hidden">
-                <!-- Foto Siswa Melingkar -->
-                <div class="flex justify-center mb-5 relative mt-[-20px]">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full scale-110 blur-md opacity-50 animate-pulse"></div>
-                        <div class="w-28 h-28 rounded-full p-1 bg-white shadow-xl relative z-10 mx-auto overflow-hidden">
-                            <img id="studentPhoto" src="" alt="Foto Siswa" 
-                                class="w-full h-full object-cover rounded-full border-4 border-gray-50 img-loading bg-white">
+                <div id="captureArea" class="bg-white/95 rounded-2xl p-4 relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-blue-50 to-transparent opacity-50 rounded-2xl z-0"></div>
+
+                    <div class="flex justify-center mb-5 relative mt-[-10px] z-10">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full scale-110 blur-md opacity-50 animate-pulse"></div>
+                            <div class="w-28 h-28 rounded-full p-1 bg-white shadow-xl relative mx-auto overflow-hidden">
+                                <img id="studentPhoto" src="" alt="Foto Siswa" 
+                                    class="w-full h-full object-cover rounded-full border-4 border-gray-50 bg-white">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-extrabold text-gray-800" id="studentName">Nama Siswa</h3>
-                    <div class="inline-block mt-2 bg-gray-100 rounded-full px-4 py-1 border border-gray-200">
-                        <p class="text-gray-600 text-sm font-semibold">NISN: <span id="studentNisn" class="text-gray-900 font-bold"></span></p>
+                    <div class="text-center mb-6 z-10 relative">
+                        <h3 class="text-2xl font-extrabold text-gray-800" id="studentName">Nama Siswa</h3>
+                        <div class="inline-block mt-2 bg-gray-100 rounded-full px-4 py-1 border border-gray-200">
+                            <p class="text-gray-600 text-sm font-semibold">NISN: <span id="studentNisn" class="text-gray-900 font-bold"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 text-center bg-gray-50 rounded-2xl p-5 border border-gray-100 shadow-inner z-10 relative">
+                        <p class="text-xs text-gray-500 mb-3 font-bold uppercase tracking-widest">Status Kelulusan</p>
+                        <div id="statusBadge" class="inline-block px-8 py-3 rounded-xl text-2xl font-black uppercase tracking-widest shadow-md transition-all duration-300">
+                            </div>
+                    </div>
+
+                    <div id="detailsCard" class="bg-white border border-gray-200 shadow-sm rounded-xl p-5 mb-4 text-sm text-gray-700 space-y-3 hidden z-10 relative">
+                       <div class="flex justify-between items-center pb-3 border-b border-gray-100">
+                           <span class="text-gray-500 font-bold">Kelas</span>
+                           <span id="studentClass" class="font-black text-gray-800 bg-gray-100 px-3 py-1 rounded-md"></span>
+                       </div>
+                       <div class="pt-2">
+                           <span class="block text-gray-500 font-bold mb-2">Catatan Wali Kelas:</span>
+                           <p id="studentMessage" class="italic text-gray-700 bg-blue-50/50 p-4 rounded-lg border-l-4 border-blue-400 leading-relaxed font-medium"></p>
+                       </div>
+                    </div>
+                    
+                    <div class="text-center mt-4 mb-2 z-10 relative">
+                        <p class="text-[10px] font-bold text-gray-400">Pengumuman Resmi SMPN 4 Silo - Jember</p>
                     </div>
                 </div>
+                <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                    <button id="btnShareWa" type="button"
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-green-500/30 transition-all duration-200 flex justify-center items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                        </svg>
+                        <span id="btnShareWaText">Bagikan ke WA</span>
+                    </button>
 
-                <div class="mb-6 text-center bg-gray-50 rounded-2xl p-5 border border-gray-100 shadow-inner">
-                    <p class="text-xs text-gray-500 mb-3 font-bold uppercase tracking-widest">Status Kelulusan</p>
-                    <div id="statusBadge" class="inline-block px-8 py-3 rounded-xl text-2xl font-black uppercase tracking-widest shadow-md transition-all duration-300">
-                        <!-- Status Kelulusan di-inject disini -->
-                    </div>
+                    <button id="btnBack" type="button"
+                        class="flex-1 bg-white hover:bg-gray-50 text-gray-700 font-bold py-3.5 px-4 rounded-xl border-2 border-gray-200 transition-colors duration-200 flex justify-center items-center">
+                        Kembali
+                    </button>
                 </div>
-
-                <div id="detailsCard" class="bg-white border border-gray-200 shadow-sm rounded-xl p-5 mb-8 text-sm text-gray-700 space-y-3 hidden">
-                   <div class="flex justify-between items-center pb-3 border-b border-gray-100">
-                       <span class="text-gray-500 font-bold">Kelas</span>
-                       <span id="studentClass" class="font-black text-gray-800 bg-gray-100 px-3 py-1 rounded-md"></span>
-                   </div>
-                   <div class="pt-2">
-                       <span class="block text-gray-500 font-bold mb-2">Catatan Wali Kelas:</span>
-                       <p id="studentMessage" class="italic text-gray-700 bg-blue-50/50 p-4 rounded-lg border-l-4 border-blue-400 leading-relaxed font-medium"></p>
-                   </div>
-                </div>
-
-                <button id="btnBack" type="button"
-                    class="w-full bg-white hover:bg-gray-50 text-gray-700 font-bold py-3.5 px-4 rounded-xl border-2 border-gray-200 transition-colors duration-200 flex justify-center items-center">
-                    <svg class="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                    </svg>
-                    Kembali ke Pencarian
-                </button>
             </div>
 
-            <!-- Result Section (Daftar Lulus NPSN) -->
             <div id="npsnResultSection" class="hidden">
                 <div class="text-center mb-6">
                     <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mb-3">
@@ -251,12 +249,9 @@
                     <p class="text-sm text-gray-500 mt-1 font-medium">SMPN 4 Silo (T.A. 2025/2026)</p>
                 </div>
                 
-                <!-- Grid Card Siswa Lulus (Scrollable) -->
                 <div class="mb-6">
                     <div id="graduatesGrid" class="max-h-[380px] overflow-y-auto custom-scrollbar p-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Card siswa di-generate lewat JavaScript -->
-                    </div>
-                    <!-- Total Badge -->
+                        </div>
                     <div class="mt-4 bg-indigo-50 border border-indigo-100 p-3 rounded-xl text-center text-sm font-bold text-indigo-700">
                         Total Kelulusan: <span id="totalLulus">0</span> Siswa
                     </div>
@@ -272,7 +267,6 @@
             </div>
         </div>
         
-        <!-- Footer -->
         <div class="bg-gray-50 p-4 text-center border-t border-gray-200 mt-auto">
             <p class="text-xs text-gray-500 font-semibold tracking-wide">
                 Made with 💔 by : em.rivki &copy; 2026 <br>
@@ -288,19 +282,19 @@
         // Data Mockup Siswa dengan link foto realistik (Pravatar / Dicebear)
         const dataSiswa = [
             { nisn: "3101904215", nama: "ADI MAULANA", kelas: "IX", lulus: true, pesan: "Selamat! Lanjutkan semangat belajarmu di jenjang selanjutnya.", foto: "img/adi.JPG" },
-            { nisn: "119626994", nama: "ASIFATUN NISA", kelas: "IX", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/syifa.JPG" },
-            { nisn: "0118219813", nama: "BAYU ANDIKA", kelas: "IX", lulus: true, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/bayu.JPG" },
-            { nisn: "3129667169", nama: "LAILA NAWANG SAFITRI", kelas: "IX", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/lala.JPG" },
-            { nisn: "3113984012", nama: "M.MAULANA RIFKI IRYANTO", kelas: "IX", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/rivki.JPG" },
-            { nisn: "0101756366", nama: "MOCH SOFWAN WIDAGDO", kelas: "IX", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/sofwan.JPG" },
-            { nisn: "0118279933", nama: "MOHAMMAD SULTON TAMAMI", kelas: "IX", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/sulton.JPG" },
-            { nisn: "3102393873", nama: "MUHAMMAD FADIL RAMADANI", kelas: "IX", lulus: true, pesan: "Jangan berkecil hati, kegagalan adalah sukses yang tertunda.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/fadil.JPG" },
-            { nisn: "0113033715", nama: "MUHAMMAD FEBY SILA SORIYANSAH ABI MANYO", kelas: "IX", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/febi.JPG" },
-            { nisn: "0112272657", nama: "NINDI APRILIA NUJUMATUL JANNAH", kelas: "IX", lulus: true, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/nindi.JPG" },
-            { nisn: "0119946812", nama: "REFAN DERMAWAN", kelas: "IX", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/refan.JPG" },
-            { nisn: "0101133194", nama: "SAVIYA RAMADHANI", kelas: "IX", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/saviya.JPG" },
-            { nisn: "3118478452", nama: "SILVIA RAHMADANI", kelas: "IX", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/silfia.JPG" },
-            { nisn: "3119853923", nama: "VELI BUDI AYU", kelas: "IX", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "https://rifkiarif.github.io/kelulusan-murid-smpn4silo/img/veli.JPG" },
+            { nisn: "119626994", nama: "ASIFATUN NISA", kelas: "IX", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "img/syifa.JPG" },
+            { nisn: "0118219813", nama: "BAYU ANDIKA", kelas: "IX", lulus: true, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "img/bayu.JPG" },
+            { nisn: "3129667169", nama: "LAILA NAWANG SAFITRI", kelas: "IX", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "img/lala.JPG" },
+            { nisn: "3113984012", nama: "M.MAULANA RIFKI IRYANTO", kelas: "IX", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "img/rivki.JPG" },
+            { nisn: "0101756366", nama: "MOCH SOFWAN WIDAGDO", kelas: "IX", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "img/sofwan.JPG" },
+            { nisn: "0118279933", nama: "MOHAMMAD SULTON TAMAMI", kelas: "IX", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "img/sulton.JPG" },
+            { nisn: "3102393873", nama: "MUHAMMAD FADIL RAMADANI", kelas: "IX", lulus: true, pesan: "Jangan berkecil hati, kegagalan adalah sukses yang tertunda.", foto: "img/fadil.JPG" },
+            { nisn: "0113033715", nama: "MUHAMMAD FEBY SILA SORIYANSAH ABI MANYO", kelas: "IX", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "img/febi.JPG" },
+            { nisn: "0112272657", nama: "NINDI APRILIA NUJUMATUL JANNAH", kelas: "IX", lulus: true, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "img/nindi.JPG" },
+            { nisn: "0119946812", nama: "REFAN DERMAWAN", kelas: "IX", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "img/refan.JPG" },
+            { nisn: "0101133194", nama: "SAVIYA RAMADHANI", kelas: "IX", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "img/saviya.JPG" },
+            { nisn: "3118478452", nama: "SILVIA RAHMADANI", kelas: "IX", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "img/silfia.JPG" },
+            { nisn: "3119853923", nama: "VELI BUDI AYU", kelas: "IX", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "img/veli.JPG" },
         ];
 
         // DOM Elements
@@ -332,6 +326,11 @@
         // NPSN Grid View DOMs
         const graduatesGrid = document.getElementById('graduatesGrid');
         const totalLulusEl = document.getElementById('totalLulus');
+
+        // Fitur Share DOMs
+        const btnShareWa = document.getElementById('btnShareWa');
+        const captureArea = document.getElementById('captureArea');
+        const btnShareWaText = document.getElementById('btnShareWaText');
 
         // Fungsi efek konfeti meriah
         function triggerConfetti() {
@@ -512,6 +511,58 @@
         // Event Tombol Kembali
         btnBack.addEventListener('click', showSearchForm);
         btnBackNpsn.addEventListener('click', showSearchForm);
+
+        // Fitur Share ke WhatsApp
+        btnShareWa.addEventListener('click', async () => {
+            // Ubah teks tombol menjadi status loading
+            const originalText = btnShareWaText.innerText;
+            btnShareWaText.innerText = "Membuat Gambar...";
+            btnShareWa.disabled = true;
+            btnShareWa.classList.add('opacity-75', 'cursor-not-allowed');
+
+            try {
+                // Konfigurasi html2canvas (useCORS penting agar foto siswa dari URL luar bisa dirender)
+                const canvas = await html2canvas(captureArea, {
+                    scale: 2, // Resolusi lebih tajam
+                    useCORS: true, 
+                    backgroundColor: "#ffffff"
+                });
+
+                canvas.toBlob(async (blob) => {
+                    const file = new File([blob], `Kelulusan_${elNisn.innerText}.png`, { type: "image/png" });
+                    const shareText = `Alhamdulillah, cek hasil pengumuman kelulusan saya di SMPN 4 Silo!\n\nNama: ${elName.innerText}\nStatus: ${elStatusBadge.innerText}`;
+
+                    // Cek apakah browser HP mendukung Web Share API beserta file gambar
+                    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                        await navigator.share({
+                            title: 'Hasil Kelulusan SMPN 4 Silo',
+                            text: shareText,
+                            files: [file]
+                        });
+                    } else {
+                        // Fallback untuk Desktop/Browser yang tidak mendukung Web Share API
+                        // 1. Download gambar otomatis
+                        const link = document.createElement('a');
+                        link.download = `Kelulusan_${elNisn.innerText}.png`;
+                        link.href = URL.createObjectURL(blob);
+                        link.click();
+                        
+                        // 2. Buka WhatsApp Web dengan pesan siap kirim
+                        const waUrl = `https://wa.me/?text=${encodeURIComponent(shareText + '\n\n*(Gambar hasil kelulusan telah diunduh ke perangkat Anda, silakan lampirkan gambar tersebut)*')}`;
+                        window.open(waUrl, '_blank');
+                    }
+                }, 'image/png');
+
+            } catch (error) {
+                console.error("Gagal membuat screenshot:", error);
+                alert("Maaf, terjadi kesalahan saat membuat gambar kelulusan.");
+            } finally {
+                // Kembalikan status tombol
+                btnShareWaText.innerText = originalText;
+                btnShareWa.disabled = false;
+                btnShareWa.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        });
 
         // Autofokus Input utama ketika aplikasi dimuat
         window.onload = () => searchQueryInput.focus();
