@@ -513,6 +513,7 @@
         btnBackNpsn.addEventListener('click', showSearchForm);
 
         // Fitur Share ke WhatsApp
+      // Fitur Share ke WhatsApp
         btnShareWa.addEventListener('click', async () => {
             // Ubah teks tombol menjadi status loading
             const originalText = btnShareWaText.innerText;
@@ -521,16 +522,22 @@
             btnShareWa.classList.add('opacity-75', 'cursor-not-allowed');
 
             try {
-                // Konfigurasi html2canvas (useCORS penting agar foto siswa dari URL luar bisa dirender)
+                // Konfigurasi html2canvas yang diperbaiki untuk mencegah gambar melar
                 const canvas = await html2canvas(captureArea, {
                     scale: 2, // Resolusi lebih tajam
                     useCORS: true, 
-                    backgroundColor: "#ffffff"
+                    backgroundColor: "#ffffff",
+                    // MENGUNCI DIMENSI AGAR TIDAK TERTARIK/MELAR
+                    width: captureArea.offsetWidth,
+                    height: captureArea.offsetHeight,
+                    windowWidth: document.documentElement.offsetWidth,
+                    windowHeight: document.documentElement.offsetHeight
                 });
 
                 canvas.toBlob(async (blob) => {
+                    // ... (kode ke bawahnya tetap sama)
                     const file = new File([blob], `Kelulusan_${elNisn.innerText}.png`, { type: "image/png" });
-                    const shareText = `Alhamdulillah, cek hasil pengumuman kelulusan saya di SMPN 4 Silo!\n\nNama: ${elName.innerText}\nStatus: ${elStatusBadge.innerText}`;
+                    const shareText = `Alhamdulillah, hasil pengumuman kelulusan saya di SMPN 4 Silo!\n\nNama: ${elName.innerText}\nStatus: ${elStatusBadge.innerText}`;
 
                     // Cek apakah browser HP mendukung Web Share API beserta file gambar
                     if (navigator.canShare && navigator.canShare({ files: [file] })) {
@@ -541,13 +548,11 @@
                         });
                     } else {
                         // Fallback untuk Desktop/Browser yang tidak mendukung Web Share API
-                        // 1. Download gambar otomatis
                         const link = document.createElement('a');
                         link.download = `Kelulusan_${elNisn.innerText}.png`;
                         link.href = URL.createObjectURL(blob);
                         link.click();
                         
-                        // 2. Buka WhatsApp Web dengan pesan siap kirim
                         const waUrl = `https://wa.me/?text=${encodeURIComponent(shareText + '\n\n*(Gambar hasil kelulusan telah diunduh ke perangkat Anda, silakan lampirkan gambar tersebut)*')}`;
                         window.open(waUrl, '_blank');
                     }
