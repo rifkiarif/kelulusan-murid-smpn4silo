@@ -275,26 +275,32 @@
         <!-- Footer -->
         <div class="bg-gray-50 p-4 text-center border-t border-gray-200 mt-auto">
             <p class="text-xs text-gray-500 font-semibold tracking-wide">
-                INFORMASI KELULUSAN | Made with 💔 by : em.rivki &copy; 2026 <br>
-                <span class="text-gray-400 font-medium">SMPN 4 SILO - Kabupaten Jember</span> <br> All Rights Reserved
+                Made with 💔 by : em.rivki &copy; 2026 <br>
+                <span class="text-gray-400 font-medium">INFORMASI KELULUSAN | SMPN 4 SILO - Kabupaten Jember</span> <br> All Rights Reserved
             </p>
         </div>
     </div>
 
     <script>
         // NPSN Sekolah untuk validasi form rekap daftar kelulusan
-        const NPSN_SEKOLAH = "20524915";
+        const NPSN_SEKOLAH = "20549897";
 
         // Data Mockup Siswa dengan link foto realistik (Pravatar / Dicebear)
         const dataSiswa = [
-            { nisn: "0012345678", nama: "Ahmad Budi Santoso", kelas: "IX-A", lulus: true, pesan: "Selamat! Lanjutkan semangat belajarmu di jenjang selanjutnya.", foto: "https://i.pravatar.cc/150?u=0012345678" },
-            { nisn: "0087654321", nama: "Siti Aminah", kelas: "IX-B", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "https://i.pravatar.cc/150?u=0087654321" },
-            { nisn: "0011223344", nama: "Cahyo Purnomo", kelas: "IX-A", lulus: false, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "https://i.pravatar.cc/150?u=0011223344" },
-            { nisn: "1234567890", nama: "Dewi Lestari", kelas: "IX-C", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "https://i.pravatar.cc/150?u=1234567890" },
-            { nisn: "0022334455", nama: "Eko Prasetyo", kelas: "IX-A", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "https://i.pravatar.cc/150?u=0022334455" },
-            { nisn: "0033445566", nama: "Fitri Handayani", kelas: "IX-B", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "https://i.pravatar.cc/150?u=0033445566" },
-            { nisn: "0044556677", nama: "Galih Rakasiwi", kelas: "IX-C", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "https://i.pravatar.cc/150?u=0044556677" },
-            { nisn: "0055667788", nama: "Hana Susanti", kelas: "IX-A", lulus: false, pesan: "Jangan berkecil hati, kegagalan adalah sukses yang tertunda.", foto: "https://i.pravatar.cc/150?u=0055667788" },
+            { nisn: "3101904215", nama: "ADI MAULANA", kelas: "IX", lulus: true, pesan: "Selamat! Lanjutkan semangat belajarmu di jenjang selanjutnya.", foto: "img/adi.jpg" },
+            { nisn: "119626994", nama: "ASIFATUN NISA", kelas: "IX", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "img/syifa.jpg" },
+            { nisn: "0118219813", nama: "BAYU ANDIKA", kelas: "IX", lulus: true, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "img/bayu.jpg" },
+            { nisn: "3129667169", nama: "LAILA NAWANG SAFITRI", kelas: "IX", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "img/lala.jpg" },
+            { nisn: "3113984012", nama: "M.MAULANA RIFKI IRYANTO", kelas: "IX", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "img/rivki.jpg" },
+            { nisn: "0101756366", nama: "MOCH SOFWAN WIDAGDO", kelas: "IX", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "img/sofwan.jpg" },
+            { nisn: "0118279933", nama: "MOHAMMAD SULTON TAMAMI", kelas: "IX", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "img/sulton.jpg" },
+            { nisn: "3102393873", nama: "MUHAMMAD FADIL RAMADANI", kelas: "IX", lulus: true, pesan: "Jangan berkecil hati, kegagalan adalah sukses yang tertunda.", foto: "img/fadil.jpg" },
+            { nisn: "0113033715", nama: "MUHAMMAD FEBY SILA SORIYANSAH ABI MANYO", kelas: "IX", lulus: true, pesan: "Selamat atas kelulusanmu. Jadilah kebanggaan orang tua dan sekolah!", foto: "img/febi.jpg" },
+            { nisn: "0112272657", nama: "NINDI APRILIA NUJUMATUL JANNAH", kelas: "IX", lulus: true, pesan: "Tetap semangat dan jangan menyerah. Silakan hubungi wali kelas untuk info lebih lanjut.", foto: "img/nindi.jpg" },
+            { nisn: "0119946812", nama: "REFAN DERMAWAN", kelas: "IX", lulus: true, pesan: "Selamat! Prestasimu sangat membanggakan, pertahankan!", foto: "img/refan.jpg" },
+            { nisn: "0101133194", nama: "SAVIYA RAMADHANI", kelas: "IX", lulus: true, pesan: "Selamat! Raih cita-citamu setinggi langit.", foto: "img/saviya.jpg" },
+            { nisn: "3118478452", nama: "SILVIA RAHMADANI", kelas: "IX", lulus: true, pesan: "Kelulusan adalah awal dari perjalanan baru. Sukses selalu!", foto: "img/silfia.jpg" },
+            { nisn: "3119853923", nama: "VELI BUDI AYU", kelas: "IX", lulus: true, pesan: "Teruslah belajar dan raih kesuksesanmu.", foto: "img/veli.jpg" },
         ];
 
         // DOM Elements
@@ -483,7 +489,7 @@
 
             setTimeout(() => {
                 // Reset Tombol
-                btnText.innerText = "Proses Pencarian";
+                btnText.innerText = "Cek NISN";
                 btnSpinner.classList.add('hidden');
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
